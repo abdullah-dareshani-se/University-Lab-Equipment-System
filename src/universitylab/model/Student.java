@@ -1,7 +1,7 @@
 package universitylab.model;
 
 public class Student {
-
+    
     private String studentName;
     private String studentId;
     private String dept;
