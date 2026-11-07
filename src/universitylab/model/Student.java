@@ -16,7 +16,7 @@ public class Student {
         this.studentName = studentName;
     }
 
-    public String getStudentNameName(){
+    public String getStudentName(){
         return studentName;
     }
 
@@ -28,14 +28,16 @@ public class Student {
         return studentId;
     }
 
-    public void setStudentDept(String dept){
+    public void setDept(String dept){
         this.dept = dept;
     }
 
-    public String getStudentNameDept(){
+    public String getDept(){
         return dept;
     }
 
+
+    @Override
     public String toString(){
         return "\n Student Id : " + studentId +
                 "\n Student Name : " + studentName +
