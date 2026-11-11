@@ -5,40 +5,35 @@ public class Booking {
 
     private String bookingId;
     private String requesterId;
-    private String requesterType;
     private String labId;
     private String bookingDate;
     private String startTime;
     private String endTime;
     private String status;
+    private String purpose;
+    private String rejectionReason;
 
-    // Constructor
     public Booking(String bookingId, String requesterId,
-                   String requesterType, String labId,
-                   String bookingDate, String startTime,
-                   String endTime, String status) {
+                   String labId, String bookingDate,
+                   String startTime, String endTime,
+                   String status, String purpose) {
 
         this.bookingId = bookingId;
         this.requesterId = requesterId;
-        this.requesterType = requesterType;
         this.labId = labId;
         this.bookingDate = bookingDate;
         this.startTime = startTime;
         this.endTime = endTime;
         this.status = status;
+        this.purpose = purpose;
     }
 
-    // Getters
     public String getBookingId() {
         return bookingId;
     }
 
     public String getRequesterId() {
         return requesterId;
-    }
-
-    public String getRequesterType() {
-        return requesterType;
     }
 
     public String getLabId() {
@@ -61,17 +56,25 @@ public class Booking {
         return status;
     }
 
-    // Setters
+
+    public String getPurpose() {
+        return purpose;
+    }
+
+    public String getRejectionReason() {
+        return rejectionReason;
+    }
+
+    public void setRejectionReason(String rejectionReason) {
+        this.rejectionReason = rejectionReason;
+    }
+
     public void setBookingId(String bookingId) {
         this.bookingId = bookingId;
     }
 
     public void setRequesterId(String requesterId) {
         this.requesterId = requesterId;
-    }
-
-    public void setRequesterType(String requesterType) {
-        this.requesterType = requesterType;
     }
 
     public void setLabId(String labId) {
@@ -94,16 +97,22 @@ public class Booking {
         this.status = status;
     }
 
-    // toString()
+    public void setPurpose(String purpose) {
+        this.purpose = purpose;
+    }
+
     @Override
     public String toString() {
         return "\nBooking ID: " + bookingId +
                 "\nRequester ID: " + requesterId +
-                "\nRequester Type: " + requesterType +
                 "\nLab ID: " + labId +
                 "\nBooking Date: " + bookingDate +
                 "\nStart Time: " + startTime +
                 "\nEnd Time: " + endTime +
-                "\nStatus: " + status;
+                "\nStatus: " + status +
+                "\nPurpose: " + purpose +
+                (rejectionReason != null
+                        ? "\nRejection Reason: " + rejectionReason
+                        : "");
     }
 }
