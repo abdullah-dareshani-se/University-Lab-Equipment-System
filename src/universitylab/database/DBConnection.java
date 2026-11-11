@@ -12,7 +12,7 @@ public class DBConnection {
 
     private static final String USER = "root";
 
-    private static final String PASSWORD = "YOUR_MYSQL_PASSWORD";
+    private static final String PASSWORD = "Dareshani@123";
 
     public static Connection getConnection()
             throws SQLException, ClassNotFoundException {
